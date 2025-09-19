@@ -18,7 +18,7 @@ def extract_text_from_pdf(pdf_path):
     for i, page in enumerate(doc):
         text = page.get_text("text")
         if text.strip():
-            texts.append((i+1, text))  # guarda nº da página
+            texts.append((i+1, text))  
     return texts
 
 
@@ -89,22 +89,22 @@ def ask_ollama(prompt, model="llama3"):
 def build_prompt(query, results):
     context = ""
     for r in results:
-        context += f"[Página {r['page']}]\n{r['text']}\n\n"
+        context += f"[PÃ¡gina {r['page']}]\n{r['text']}\n\n"
 
     prompt = f"""
-Você é um assistente técnico que responde baseado apenas no conteúdo abaixo dos catálogos:
+VocÃª Ã© um assistente tÃ©cnico que responde baseado apenas no conteÃºdo abaixo dos catÃ¡logos:
 
 {context}
 
 Pergunta: {query}
 
-Responda de forma clara, cite a página do catálogo quando possível.
-Se a resposta não estiver nos catálogos, diga "Não encontrei essa informação no catálogo".
+Responda de forma clara, cite a pÃ¡gina do catÃ¡logo quando possÃ­vel.
+Se a resposta nÃ£o estiver nos catÃ¡logos, diga "NÃ£o encontrei essa informaÃ§Ã£o no catÃ¡logo".
 """
     return prompt
 
 
-# 6) Execução principal
+# 6) Execuï¿½ï¿½o principal
 if __name__ == "__main__":
     rag = PDFRAG()
     rag.build_index(pdf_folder="pdfs")  # coloque seus PDFs na pasta "pdfs"
