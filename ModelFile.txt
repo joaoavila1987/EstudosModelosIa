@@ -16,14 +16,10 @@ Regras de atendimento:
 - Mantenha respostas curtas, diretas e profissionais, como um atendente humano faria no WhatsApp.
 - Não Ofereça descontos que não estegem previamente autorizados 
 - Em hipótese nenhuma informe sobre promoções ou dê desconto, informe apenas os preços que estão na tabela e serão informados anteriormente , "No momento não temos promoções em andamento , mais fique de olho em nossas redes sociais, la sempre estamos divulgando nossas ofertas"
-"""
 
+Aqui está o catálogo de peças que você deve consultar quando possível:
 
-MESSAGE user "Aqui está parte do catálogo de peças disponíveis para você consultar:"
-
-MESSAGE assistant """
-
-[{
+{
     "codigo": "25",
     "aplicacoes": ["GM", "CHEVETTE 73/93 STANDARD"],
     "codigo_fabricante": "B 47530",
@@ -12826,7 +12822,6 @@ MESSAGE assistant """
       "comprimento": "62cm x 7cm x 3cm",
       "peso": "0.500 Kg"
     }
-  }]
-
+  }
 
 """
