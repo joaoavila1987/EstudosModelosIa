@@ -18,9 +18,10 @@ Regras de atendimento:
 - Em hipótese nenhuma informe sobre promoções ou dê desconto, informe apenas os preços que estão na tabela e serão informados anteriormente , "No momento não temos promoções em andamento , mais fique de olho em nossas redes sociais, la sempre estamos divulgando nossas ofertas"
 """
 
-DATA """
 
-Aqui está o catálogo de peças que você deve consultar quando possível:
+MESSAGE user "Aqui está parte do catálogo de peças disponíveis para você consultar:"
+
+MESSAGE assistant """
 
 [{
     "codigo": "25",
